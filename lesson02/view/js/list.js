@@ -67,4 +67,24 @@ const studentMarks = () => {
     student_data.sort();
     console.log('student information : ', student_info);
 };
-studentMarks();
+// studentMarks();
+function fruits() {
+    let fruits = [];
+    while (true) {
+        let input_fruit = prompt("Enter Fruit ? : ");
+        if (String(input_fruit).toLowerCase() == 'no') {
+            return fruits;
+        }
+        else {
+            fruits.push(String(input_fruit));
+        }
+    }
+}
+let vegatable_fruits = fruits();
+let new_fruits = vegatable_fruits.slice(1, 3);
+console.log(vegatable_fruits);
+console.log('new fruits : ', new_fruits);
+vegatable_fruits.splice(1, 3);
+console.log('removed fruits : ', vegatable_fruits);
+vegatable_fruits.splice(1, 0, "papay", "liin");
+console.log('add new fruits', vegatable_fruits);
