@@ -31,3 +31,58 @@ function sumNumArr(...num:number[]){
 }
 console.log(sumNumArr(1,2,3,4,5,6,7,8,9,10));
 
+// prive number 
+
+function isPrime(num:number){
+	if(num < 2){
+		return false;
+	}
+
+	for(let i:number = 2; i <= Math.sqrt(num); i++){
+		if(num % i == 0){
+			return false;
+		}
+	}
+
+	return true
+}
+function primeNumbers(num:number):void{
+	type primeNum = number[];
+	let numbers : primeNum = [];
+	for(let i:number = 2; i <= num; i++){
+		if(isPrime(i)){
+			numbers.push(i);
+		}
+	}
+
+	console.log(`The Prime numbers are : ${numbers}`);
+}
+
+primeNumbers(100)
+
+
+function isNotPrime(num:number){
+	if(num < 2){
+		return false;
+	}
+
+	for(let i:number = 2; i <= Math.sqrt(num); i++){
+		if(num % i == 0){
+			return true;
+		}
+	}
+}
+function nonePrimeNumbers(num:number):void{
+	type primeNum = number[];
+	let numbers : primeNum = [];
+	let i:number = 2;
+	for(let i:number = 2; i <= num; i++){
+		if(isNotPrime(i)){
+			numbers.push(i);
+		}
+	}
+
+	console.log(`The None Prime numbers are : ${numbers}`);
+}
+nonePrimeNumbers(100);
+
