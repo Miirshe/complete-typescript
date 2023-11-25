@@ -31,3 +31,21 @@ function personInfo(person) {
         ];
 }
 personInfo(person_info);
+class PersonData {
+    constructor(name, age, phone, gender, address) {
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+        this.gender = gender;
+        this.address = address;
+    }
+}
+const personData = new PersonData('miirshe', 23, 618302314, 'male', 'xamar jajab');
+console.log(personData);
+console.log(personData.name);
+function person_data(person) {
+    for (let key in person) {
+        console.log(`${key} : ${person[key]}`);
+    }
+}
+person_data(personData);

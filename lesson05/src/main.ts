@@ -52,3 +52,45 @@ function personInfo(person:Person):void{
 personInfo(person_info);
 
 
+class PersonData implements Person {
+	[index: string]: string | number | boolean | undefined;
+	name: string;
+	age: number;
+	phone: number;
+	gender: string;
+	address: string;
+  
+	constructor(
+	  name: string,
+	  age: number,
+	  phone: number,
+	  gender: string,
+	  address: string
+	) {
+	  this.name = name;
+	  this.age = age;
+	  this.phone = phone;
+	  this.gender = gender;
+	  this.address = address;
+	}
+  }
+  
+  const personData = new PersonData(
+	'miirshe',
+	23,
+	618302314,
+	'male',
+	'xamar jajab'
+  );
+  console.log(personData);
+  console.log(personData.name);
+
+function person_data(person : Person):void{
+
+	for(let key in person){
+		console.log(`${key} : ${person[key]}`);
+	}
+}
+
+person_data(personData);
+
